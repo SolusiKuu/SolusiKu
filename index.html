@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolusiKu - Jasa Desain & Joki Akademik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        
+        .bg-primary {
+            background-color: #a5d8ff;
+        }
+        
+        .bg-secondary {
+            background-color: #e7f5ff;
+        }
+        
+        .text-primary {
+            color: #1971c2;
+        }
+        
+        .border-primary {
+            border-color: #74c0fc;
+        }
+        
+        .portfolio-item {
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #4dabf7;
+            box-shadow: 0 0 0 3px rgba(29, 155, 255, 0.15);
+        }
+        
+        .nav-link.active {
+            color: #1971c2;
+            font-weight: 600;
+            border-bottom: 2px solid #1971c2;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #a5d8ff 0%, #e7f5ff 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="mr-2 bg-primary rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-primary">SolusiKu</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="nav-link active py-2 text-gray-700 hover:text-primary transition">Beranda</a></li>
+                    <li><a href="#services" class="nav-link py-2 text-gray-700 hover:text-primary transition">Layanan</a></li>
+                    <li><a href="#portfolio" class="nav-link py-2 text-gray-700 hover:text-primary transition">Portofolio</a></li>
+                    <li><a href="https://wa.me/6285877205217?text=Halo%20bosku%2C%20saya%20tertarik%20dengan%20jasanya%20dari%20SolusiKu" class="nav-link py-2 text-gray-700 hover:text-primary transition">Pesan</a></li>
+                    <li><a href="#about" class="nav-link py-2 text-gray-700 hover:text-primary transition">Tentang</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-gray-700 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero py-20 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-8">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                    Solusi Tepat untuk <span class="text-primary">Tugas & Desain</span> Cepat Anda
+                </h2>
+                <p class="text-gray-600 text-lg mb-8">
+                    SolusiKu memberikan jasa desain UI/UX, joki tugas, dan pembuatan laporan profesional dengan kualitas terbaik dan harga terjangkau.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/6285877205217?text=Halo%20bosku%2C%20saya%20tertarik%20dengan%20jasanya%20dari%20SolusiKu" class="bg-primary hover:bg-blue-500 text-white font-medium py-3 px-6 rounded-lg shadow-md transition">
+                        Pesan Sekarang
+                    </a>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-6 rounded-lg shadow-md transition">
+                        Jelajahi Layanan
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0">
+                <img src="website solusiku 1.png" alt="Ilustrasi digital creative workspace dengan laptop, tablet, dan buku catatan di meja kerja modern" class="rounded-lg shadow-xl" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Layanan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    SolusiKu menawarkan berbagai layanan profesional untuk memenuhi kebutuhan akademik dan desain Anda.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-secondary rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="bg-primary rounded-full p-3 w-14 h-14 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Jasa Joki Tugas</h3>
+                    <p class="text-gray-600">
+                        Penyelesaian berbagai jenis tugas akademik dan desain dengan tepat waktu dan kualitas terjamin.
+                    </p>
+                    <div class="mt-4">
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Tugas individu & kelompok</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Berbagai bidang studi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Original & bebas plagiasi</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-secondary rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="bg-primary rounded-full p-3 w-14 h-14 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Jasa Joki Laporan</h3>
+                    <p class="text-gray-600">
+                        Pembuatan laporan PKL, Studytour, atau Kunjungan industri dengan format yang benar dan tanpa ribet.
+                    </p>
+                    <div class="mt-4">
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Laporan Studytour/KI</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Laporan PKL</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Format standar Intansi Sekolah</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-secondary rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="bg-primary rounded-full p-3 w-14 h-14 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Jasa Desain UI/UX</h3>
+                    <p class="text-gray-600">
+                    Desain antarmuka pengguna yang menarik dan fungsional untuk aplikasi atau website Anda.
+                    </p>
+                    <div class="mt-4">
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Web & mobile design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Wireframing & prototyping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>User experience research</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#order" class="inline-block bg-primary hover:bg-blue-500 text-white font-medium py-3 px-6 rounded-lg shadow-md transition">
+                    Lihat Semua Layanan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-secondary px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Portofolio Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Beberapa contoh hasil kerja kami yang telah diselesaikan untuk klien sebelumnya.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="ui ux.png" alt="Desain UI/UX aplikasi mobile untuk layanan kesehatan dengan warna biru dan putih yang bersih" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Jasa Desain</h3>
+                        <p class="text-gray-600 mb-4">Desain UI/UX untuk Website</p>
+                        <div class="flex items-center">
+                            <span class="bg-blue-100 text-primary text-sm font-medium px-3 py-1 rounded-full">
+                                PORTOFOLIO DESAIN  →
+                                <!-- Button Minimalis -->
+<a href="https://www.instagram.com/p/DLuCkU6PUap/?utm_source=ig_web_copy_link" class="text-blue-500 hover:text-blue-700 hover:underline">Lihat File</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="jasa ketik.png" alt="Tugas makalah akademik tentang ekonomi dengan format profesional dan grafik data" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">JASA JOKI LAPORAN</h3>
+                        <p class="text-gray-600 mb-4">Penyelesaian Tugas Laporan PKL, StudyTour dan Kunjungan industri.</p>
+                        <div class="flex items-center">
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full mr-2">
+                                Joki Laporan 
+                            </span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+                                PORTOFOLIO DESAIN →
+                                                                <!-- Button Minimalis -->
+<a href="https://www.instagram.com/p/DLuCkU6PUap/?utm_source=ig_web_copy_link" class="text-blue-500 hover:text-blue-700 hover:underline">Lihat File</a>
+ 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="jasa desain media sosial.png" alt="Laporan penelitian lengkap dengan diagram, tabel data, dan pembahasan ilmiah" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Jasa Desain Sosial media</h3>
+                        <p class="text-gray-600 mb-4">Jasa desain grafis untuk media sosial dan kepentingan posting</p>
+                        <div class="flex items-center">
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mr-2">
+                                Jasa desain
+                            </span>
+                            <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
+                                Media sosial→
+                                                                <!-- Button Minimalis -->
+<a href="https://www.instagram.com/p/DLuCkU6PUap/?utm_source=ig_web_copy_link" class="text-blue-500 hover:text-blue-700 hover:underline">Lihat File</a>
+ 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="percetakan.png" alt="Website e-learning modern dengan dashboard admin dan antarmuka pengguna siswa" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Jasa desain percetakan</h3>
+                        <p class="text-gray-600 mb-4">Desain Banner , kaos , kalender , jersey dll.</p>
+                        <div class="flex items-center">
+                            <span class="bg-blue-100 text-primary text-sm font-medium px-3 py-1 rounded-full">
+                                Desain untuk di cetak→
+                                                                <!-- Button Minimalis -->
+<a href="https://www.instagram.com/p/DLuCkU6PUap/?utm_source=ig_web_copy_link" class="text-blue-500 hover:text-blue-700 hover:underline">Lihat File</a>
+ 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="jasa website.png" alt="Laporan keuangan perusahaan dengan analisis rasio dan rekomendasi strategis" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Jasa pembuatan website</h3>
+                        <p class="text-gray-600 mb-4">Jasa pembuatan website dengan penyesuaian terhadap kemauan costumer dengan harga yang terjangkau</p>
+                        <div class="flex items-center">
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mr-2">
+                                Jasa pembuatan webiste
+                            </span>
+                            <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-3 py-1 rounded-full">
+                                PORTOFOLIO→
+                                                                <!-- Button Minimalis -->
+<a href="https://www.instagram.com/p/DLuCkU6PUap/?utm_source=ig_web_copy_link" class="text-blue-500 hover:text-blue-700 hover:underline">Lihat File</a>
+ 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="formar laporan.png" alt="Tugas akhir teknik informatika tentang pengembangan sistem dengan dokumentasi lengkap" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pembelian format laporan</h3>
+                        <p class="text-gray-600 mb-4">Kami tidak hanya menyediakan jasa namun kami juga menjual formatnya untuk kalian yang mau membuat sendiri laporan tersebut</p>
+                        <div class="flex items-center">
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full mr-2">
+                                Format laporan
+                            </span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">
+                                PORTOFOLIO→
+                                                                <!-- Button Minimalis -->
+<a href="https://www.instagram.com/p/DLuCkU6PUap/?utm_source=ig_web_copy_link" class="text-blue-500 hover:text-blue-700 hover:underline">Lihat File</a>
+ 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/solusikuofficial" target="_blank" class="inline-flex items-center bg-white hover:bg-gray-100 text-primary font-medium py-3 px-6 rounded-lg shadow-md transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                    Lihat Lebih Banyak di Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16 bg
